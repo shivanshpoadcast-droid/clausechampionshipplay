@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,522 +19,570 @@
       margin: 0;
       line-height: 1.5;
     }
-    h1, h2 {
-      text-shadow: 0 0 15px #d72631, 0 0 25px #a31d24;
-      color: #d72631;
-      font-family: "Orbitron", sans-serif;
-    }
-    nav {
-      background: #0b1b0b;
-      box-shadow: 0 0 15px #d72631cc;
+    .scale-banner {
       display: flex;
       justify-content: center;
-      gap: 7px;
-      flex-wrap: wrap;
-      font-size: 1.1em;
-      padding: 5px 0;
-    }
-    nav a {
-      color: #28a745;
-      text-decoration: none;
-      padding: 12px 27px;
-      transition: 0.3s;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: nowrap;
+      max-width: 800px;
+      margin: 0 auto 12px auto;
       font-weight: 700;
-      border-radius: 0;
+      font-size: 1.2rem;
+      user-select: none;
     }
-    nav a:hover,
-    nav a:focus {
-      background: #d72631;
-      color: #000;
-      outline: none;
-      box-shadow: 0 0 12px #a31d24;
+    .flag {
+      width: 36px;
+      height: auto;
+      object-fit: contain;
+      user-select: none;
+    }
+    h1 {
+      font-weight: 700;
+      text-align: center;
+      font-size: 2.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: nowrap;
+      margin: 0 auto 12px auto;
+      max-width: 900px;
+      user-select: none;
+    }
+    .tagline {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      user-select: none;
     }
     .cta-btn {
       background: #d72631;
-      color: #fff;
-      box-shadow: 0 0 15px #a02c2c88;
-      transition: all 0.4s ease;
-      font-size: 1.3rem;
+      color: white;
       font-weight: 700;
-      padding: 14px 34px;
-      border-radius: 4px;
+      padding: 12px 24px;
+      border-radius: 30px;
       text-decoration: none;
+      font-size: 1.2rem;
       display: inline-block;
-      cursor: pointer;
+      box-shadow: 0 4px 15px #d7263150;
+      transition: background-color 0.3s ease;
       user-select: none;
-      border: none;
     }
     .cta-btn:hover,
     .cta-btn:focus {
-      background: #28a745;
-      box-shadow: 0 0 25px #3a873aaa;
-      color: #000;
-      transform: scale(1.05);
+      background-color: #ff3b55;
       outline: none;
-    }
-    #sticky-register {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #d72631;
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.1rem;
-      padding: 14px 26px;
-      border-radius: 50px;
-      box-shadow: 0 0 20px #a02c2cbb;
-      animation: pulseSticky 2s infinite;
-      z-index: 999;
-      text-decoration: none;
-      user-select: none;
-    }
-    #sticky-register:hover,
-    #sticky-register:focus {
-      background: #28a745;
-      box-shadow: 0 0 40px #3a873aaa;
-      outline: none;
-      transform: scale(1.1);
-      color: #000;
-    }
-    @keyframes pulseSticky {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 15px #a02c2cbb;
-      }
-      50% {
-        transform: scale(1.1);
-        box-shadow: 0 0 35px #3a873aaa;
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 15px #a02c2cbb;
-      }
-    }
-    header {
-      text-align: center;
-      background: linear-gradient(135deg, #100808, #220d0d 90%);
-      padding: 38px 9px 26px 9px;
-      user-select: none;
-    }
-    .scale-banner {
-      color: #28a745;
-      background: #1e271e;
-      border-radius: 18px;
-      padding: 8px 32px;
-      display: inline-block;
-      font-size: 1.13rem;
-      box-shadow: 0 0 25px #3aff7f55;
-      margin-bottom: 18px;
-    }
-    .flag {
-      display: inline-block;
-      animation: wave 2s infinite ease-in-out;
-      transform-origin: center;
-      height: 40px;
-      vertical-align: middle;
-    }
-    @keyframes wave {
-      0% { transform: rotate(0deg) skewX(0deg); }
-      25% { transform: rotate(2deg) skewX(2deg); }
-      50% { transform: rotate(0deg) skewX(0deg); }
-      75% { transform: rotate(-2deg) skewX(-2deg); }
-      100% { transform: rotate(0deg) skewX(0deg); }
-    }
-    h1 {
-      font-size: 2.3rem;
-      margin: 0;
-    }
-    .tagline {
-      font-size: 1.3rem;
-      color: #d72631;
-      font-weight: bold;
-      margin: 9px 0 16px;
-      animation: blink 1.2s infinite alternate;
-      user-select: none;
-    }
-    @keyframes blink { to {opacity: 0.38;} }
-    .hero-img {
-      width: 100%;
-      max-width: 520px;
-      border-radius: 24px;
-      box-shadow: 0 8px 40px #a02c2ccc;
-      margin: 12px auto 14px;
-      display: block;
-      object-fit: cover;
-      filter: grayscale(30%);
-      loading: lazy;
     }
     .social-links-container {
-      margin: 28px auto 0;
       display: flex;
       justify-content: center;
-      gap: 56px;
+      gap: 24px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      user-select: none;
     }
     .social-link-btn {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-      font-family: "Montserrat", Arial, sans-serif;
-      font-size: 1.06rem;
-      transition: transform 0.18s;
+      width: 75px;
     }
-    .social-link-btn:hover { transform: translateY(-4px) scale(1.09);}
     .social-link-btn img {
-      width: 55px;
-      height: 55px;
-      margin-bottom: 8px;
-      background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 4px 24px 2px rgba(0,0,0,0.23);
-    }
-    .social-link-label {
-      color: #fff;
-      font-weight: 700;
-    }
-    main {
-      max-width: 1050px;
-      margin: 44px auto 26px;
-      background: rgba(15, 20, 15, 0.92);
-      border-radius: 18px;
-      padding: 32px 18px;
-      box-shadow: 0 4px 42px #1fd72666;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 6px;
       user-select: none;
     }
-    h2 {
-      color: #28a745;
-      text-align: center;
-      text-shadow: 0 0 14px #3aff7f;
-      margin-top: 0;
-      font-family: "Orbitron", sans-serif;
-    }
-    .highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin: 24px 0;
-    }
-    .hl-card {
-      background: #122212;
-      border: 2px solid #28a745;
-      border-radius: 17px;
-      padding: 12px 14px;
-      flex: 1 1 auto;
-      min-width: 220px;
-      max-width: 98vw;
-      text-align: center;
-      animation: bounceIn 1s;
-      font-size: 1.05rem;
-      line-height: 1.4;
-      margin: 8px auto;
-      user-select: none;
-      color: #d7f2d7;
-      font-weight: 600;
-    }
-    .hl-card strong {
-      font-size: 1.3em;
-      color: #d72631;
-    }
-    @keyframes bounceIn {
-      from {transform: scale(0.7);opacity: 0;}
-      to {transform: scale(1);opacity: 1;}
-    }
-    .prizes {
-      gap: 32px;
-      justify-content: center;
-      padding: 16px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .prize-card {
-      background: linear-gradient(120deg, #1e3a16 70%, #28a745 100%);
-      color: #e5f3e0;
-      border-radius: 20px;
-      padding: 20px 15px 16px 20px;
-      margin-bottom: 12px;
-      text-align: center;
-      box-shadow: 0 0 14px #3aff7f, 0 0 30px #17b744, 0 0 45px #28a745aa;
-      max-width: 240px;
-      flex: 1 1 210px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-    }
-    .prize-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px #28ff58, 0 0 50px #17d740, 0 0 70px #28ff58cc;
-    }
-    .prize-card ul {
-      padding-left: 19px;
-      list-style-type: none;
-      margin: 0;
-    }
-    .prize-card li {
-      margin: 7px 0;
-    }
-    .prize-card img {
-      border-radius: 14px;
-      max-width: 100%;
-      height: 190px;
-      object-fit: contain;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 25px rgba(40, 167, 69, 0.8);
-      user-select: none;
-    }
-    .prize-card.top50 {
-      background: linear-gradient(60deg, #a1e347 70%, #50e9aa 100%);
-      color: #10331a;
-      box-shadow: 0 0 28px #a1e347, 0 0 45px #50e9aa, 0 0 75px #78d4ab;
-      font-weight: 800;
-      animation: pulseGlowTop50 2.5s infinite alternate;
-      border: 3px solid #50e9aa;
-    }
-    @keyframes pulseGlowTop50 {
-      0% {
-        box-shadow: 0 0 28px #50e9aacc, 0 0 45px #50e9aacc, 0 0 75px #50e9aacc;
-        transform: scale(1);
-      }
-      100% {
-        box-shadow: 0 0 55px #50e9aaff, 0 0 60px #50e9aaff, 0 0 95px #50e9aaff;
-        transform: scale(1.05);
-      }
-    }
-    .prize-card.top50 h3::before {
-      content: "💸";
-      margin-right: 8px;
-      font-size: 1.3em;
-    }
-    .prize-card.top50 ul li:first-child {
-      font-size: 1.25em;
-      color: #296d29;
-      font-weight: 900;
-      text-shadow: 0 0 6px #159215, 0 0 10px #44ff44;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .prize-card, .hl-card {max-width: 90vw; min-width: 90vw;}
-    }
-    #special-rules {
-      max-width: 1050px;
-      margin: 30px auto;
-      padding: 20px 18px;
-      background: #331414cc;
-      border-radius: 18px;
-      box-shadow: 0 0 20px #d72631cc;
-      border: 2px solid #d72631;
-      color: #ff6464;
-      font-weight: bold;
-      font-size: 1.1rem;
-      overflow: hidden;
-      position: relative;
-      user-select: none;
-    }
-    #special-rules .marquee-rules {
-      white-space: nowrap;
-      animation: marquee-slide 18s linear infinite;
-      display: block;
-      color: #ff5252;
-    }
-    @keyframes marquee-slide {0% {transform: translateX(100%);} 100% {transform: translateX(-100%);}}
-    .form-section {
-      background: #1a2c1a90;
-      border-radius: 15px;
-      padding: 21px 14px;
-      margin-top: 19px;
-      text-align: center;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      user-select: none;
-      color: #cfffcf;
-    }
-    label {
-      display: block;
-      margin: 12px 0 2px;
-      font-weight: 700;
-      color: #ace1ac;
-    }
-    input, button {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #44bb44;
-      width: 90%;
-      max-width: 370px;
-      font-size: 1rem;
-      box-sizing: border-box;
-      background: #0d1a0d;
-      color: #c1ffc1;
-    }
-    input:focus, button:focus {
-      box-shadow: 0 0 8px #28a745;
-      outline: none;
-      border-color: #28a745;
-      background: #142a14;
-    }
-    button {
-      background: #d72631;
-      color: #fff;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      width: auto;
-      transition: background-color 0.3s;
-      margin-top: 10px;
-    }
-    button:disabled {
-      background: #789978;
-      cursor: not-allowed;
-    }
-    button:hover:not(:disabled) {
-      background: #28a745;
-      color: #000;
-    }
-    .error-message {
-      color: #ff6464;
-      font-size: 0.9rem;
-      height: 1.3em;
-      margin-top: 2px;
-      display: block;
-      text-align: left;
-      max-width: 370px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .characters-container {
-      margin: 24px 0;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      user-select: none;
-    }
-    .character-guard, .character-prisoner {
-      position: relative;
-      animation: floatUpDown 3.5s ease-in-out infinite, waveHand 5s ease-in-out infinite;
-      transform-origin: center bottom;
-      width: 240px;
-      flex-shrink: 0;
-    }
-    .character-guard img {
-      animation: pulseGlow 2.8s ease-in-out infinite;
-    }
-    @keyframes floatUpDown {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-    @keyframes waveHand {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      25% {
-        transform: translateY(-8px) rotate(6deg);
-      }
-      50% {
-        transform: translateY(0) rotate(0deg);
-      }
-      75% {
-        transform: translateY(-6px) rotate(-6deg);
-      }
-    }
-    @keyframes pulseGlow {
-      0%, 100% {
-        filter: drop-shadow(0 0 4px #a02c2c);
-      }
-      50% {
-        filter: drop-shadow(0 0 10px #b84343);
-      }
-    }
-    .speech-bubble {
-      position: absolute;
-      max-width: 180px;
-      padding: 10px 14px;
-      border-radius: 18px;
-      background: rgba(215, 38, 49, 0.85);
-      color: #fff;
-      font-weight: 700;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.2rem;
-      line-height: 1.3;
-      box-shadow: 0 0 12px #a02c2cbb;
-      animation: bubbleFadeSlide 4s ease-in-out infinite;
-      user-select: none;
-      pointer-events: none;
-    }
-    .bubble-left {
-      bottom: 85%;
-      left: -190px;
-      clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
-    }
-    .bubble-right {
-      bottom: 70%;
-      right: -190px;
-      clip-path: polygon(0 0, 80% 0, 100% 20px, 100% 100%, 0 100%);
-    }
-    @keyframes bubbleFadeSlide {
-      0%, 100% {
-        opacity: 0;
-        transform: translateX(20px);
-      }
-      50% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    /* Social Links */
-    .social-links-container {
-      margin: 28px auto 0;
-      display: flex;
-      justify-content: center;
-      gap: 56px;
-    }
-    .social-link-btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-      font-family: "Montserrat", Arial, sans-serif;
-      font-size: 1.06rem;
-      transition: transform 0.18s;
-    }
-    .social-link-btn:hover { transform: translateY(-4px) scale(1.09);}
-    .social-link-btn img {
-      width: 55px;
-      height: 55px;
-      margin-bottom: 8px;
-      background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 4px 24px 2px rgba(0,0,0,0.23);
-    }
-    .social-link-label {
-      color: #fff;
-      font-weight: 700;
-    }
-    /* Prize & Registration Notice */
     .registration-notice {
-      margin: 32px auto 28px;
       max-width: 650px;
       text-align: center;
       font-size: 1.17rem;
       font-weight: bold;
       color: #ffeb3b;
-      background: rgba(26,0,0,0.12);
+      background: rgba(26, 0, 0, 0.12);
       border: 2px dashed #d72631;
       border-radius: 18px;
       box-shadow: 0 0 24px #d7263155;
       padding: 16px 12px;
+      margin: 32px auto 28px;
+      user-select: none;
+      line-height: 1.4;
+    }
+    .hero-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 24px auto;
+      user-select: none;
+      border-radius: 18px;
+      box-shadow: 0 0 40px #d72631aa;
+    }
+    .marquee {
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #28a745;
+      text-shadow: 0 0 8px #28a745aa;
+      margin-top: 24px;
       user-select: none;
     }
-    .registration-notice span {
-      color: #fff;
-      font-weight: 800;
+    nav[role="navigation"] {
+      background: #122b12;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 14px 10px;
+      user-select: none;
     }
-    .registration-notice span.highlight1 { color: #f4477a; }
-    .registration-notice span.highlight2 { color: #ff0000; }
-    .registration-notice u { text-decoration: underline; }
+    nav[role="navigation"] a {
+      color: #a1f597;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+    }
+    nav[role="navigation"] a:hover,
+    nav[role="navigation"] a:focus {
+      background-color: #28a745aa;
+      outline: none;
+    }
+    main[role="main"] {
+      max-width: 1080px;
+      margin: 0 auto 40px;
+      padding: 0 12px;
+    }
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #28a745;
+      margin-bottom: 18px;
+      text-align: center;
+      user-select: none;
+      text-shadow: 0 0 14px #3aff7f;
+    }
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 36px;
+      user-select: none;
+    }
+    .hl-card {
+      background-color: #114911dd;
+      padding: 14px 22px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-align: center;
+      box-shadow: 0 3px 24px #28a745bb;
+      min-width: 220px;
+      max-width: 280px;
+      color: #a1f597;
+      user-select: none;
+    }
+    #ceo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+      background: #122b12;
+      border-radius: 18px;
+      padding: 48px 24px;
+      box-shadow: 0 6px 50px #28a745aa;
+      max-width: 1050px;
+      margin: 60px auto 40px;
+      user-select: none;
+    }
+    #ceo > div:first-child {
+      flex: 1 1 450px;
+      min-width: 320px;
+      color: #d7f2d7;
+    }
+    #ceo > div:first-child p:first-child {
+      color:#adf19a;
+      font-weight: 900;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    #ceo > div:last-child {
+      flex: 1 1 350px;
+      min-width: 260px;
+      text-align: center;
+    }
+    #ceo img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      margin: 20px auto;
+      box-shadow: 0 0 40px #28a745, 0 0 60px #3aff7f;
+      user-select: none;
+      border-radius: 16px;
+    }
+    .characters-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+      flex-wrap: nowrap;
+    }
+    .character-guard,
+    .character-prisoner {
+      max-width: 280px;
+      flex: 0 1 280px;
+      text-align: center;
+    }
+    .character-guard img,
+    .character-prisoner img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 0 12px #d72631aa;
+    }
+    .speech-bubble {
+      position: absolute;
+      max-width: 220px;
+      background: #d72631dd;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 10px 14px;
+      border-radius: 20px;
+      z-index: 2;
+      box-shadow: 0 4px 14px #d7263155;
+      user-select: none;
+    }
+    .bubble-left {
+      bottom: 14px;
+      left: 8px;
+      text-align: left;
+      transform-origin: bottom left;
+    }
+    .bubble-right {
+      bottom: 14px;
+      right: 8px;
+      text-align: right;
+      transform-origin: bottom right;
+    }
+    #prizes {
+      user-select: none;
+    }
+    .prizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .prize-card {
+      background: #122b12;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 6px 38px #28a745aa;
+      max-width: 280px;
+      text-align: center;
+      color: #a1f597;
+      user-select: none;
+    }
+    .prize-card h3 {
+      color: #28a745;
+      font-weight: 900;
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      text-shadow: 0 0 10px #3aff7f;
+    }
+    .prize-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      user-select: none;
+    }
+    .prize-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #c4fac4;
+    }
+    .prize-card.top50 {
+      max-width: 320px;
+      background: #194419;
+      color: #bbffbb;
+      box-shadow: 0 6px 48px #0f5015;
+    }
+    .prize-card.top50 ul li:nth-child(2) {
+      color: #296d29;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+    .prize-card.top50 div {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 12px;
+      color: #0f5015;
+    }
+    #prizes > div:last-child {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 1.25em;
+      font-weight: bold;
+      color: #a1f597;
+      text-shadow: 0 2px 12px #114911;
+      user-select: none;
+    }
+    #special-rules {
+      max-width: 1080px;
+      margin: 0 auto 40px;
+      padding: 0 12px;
+      user-select: none;
+    }
+    #special-rules h2 {
+      color: #d72631;
+      text-align: center;
+      margin-bottom: 12px;
+      text-shadow: 0 0 8px #b72b2b;
+      user-select: none;
+    }
+    .marquee-rules {
+      color: #ff5252;
+      user-select: none;
+      font-weight: 700;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: marquee 25s linear infinite;
+      border-radius: 18px;
+      background: #33101033;
+      padding: 14px 10px;
+      font-size: 1rem;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    #launch-game, #live-stats {
+      max-width: 1050px;
+      margin: 30px auto;
+      border-radius: 18px;
+      padding: 24px 18px;
+      box-shadow: 0 4px 42px #28a74599;
+      text-align: center;
+      user-select: none;
+    }
+    #launch-game {
+      background: #122b12;
+      color: #28a745;
+    }
+    #live-stats {
+      background: #1e331e;
+      color: #a0d8a0;
+    }
+    #live-stats div {
+      font-size: 1.3rem;
+      margin-top: 9px;
+    }
+    #register {
+      max-width: 500px;
+      margin: 30px auto 60px;
+      user-select: none;
+    }
+    #register h2 {
+      margin-bottom: 22px;
+    }
+    .form-section {
+      background: #122b12;
+      padding: 24px 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 50px #28a745aa;
+      color: #acf7ac;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    label {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #a1f597;
+      user-select: none;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      outline: none;
+      font-family: "Montserrat", Arial, sans-serif;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+      box-shadow: 0 0 8px #28a745bb;
+      background-color: #1e331e;
+      color: #acf7ac;
+    }
+    button[type="submit"] {
+      background-color: #d72631;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px #d7263155;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: #ff3b55;
+      outline: none;
+    }
+    .error-message {
+      color: #ff6464;
+      font-weight: 700;
+      font-size: 0.9rem;
+      min-height: 18px;
+      user-select: none;
+    }
+    #form-status {
+      font-weight: 700;
+      font-size: 1rem;
+      min-height: 20px;
+    }
+    #rules {
+      max-width: 1080px;
+      margin: 0 auto 50px;
+      user-select: none;
+    }
+    #rules .highlights {
+      gap: 16px;
+      margin: 20px auto 0;
+      max-width: 720px;
+    }
+    #contact {
+      max-width: 500px;
+      margin: 0 auto 40px;
+      padding: 0 12px;
+      color: #acf7ac;
+      user-select: none;
+    }
+    #contact a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    #contact a:hover,
+    #contact a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    footer[role="contentinfo"] {
+      text-align: center;
+      padding: 18px;
+      background: #0b1b0b;
+      color: #a1f597;
+      user-select: none;
+      font-size: 0.9rem;
+    }
+    footer .flag {
+      width: 48px;
+      margin: 0 6px;
+      vertical-align: middle;
+    }
+    #sticky-register {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      background-color: #d72631;
+      color: white;
+      padding: 16px 26px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 25px #d7263155;
+      text-decoration: none;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    #sticky-register:hover,
+    #sticky-register:focus {
+      background-color: #ff3b55;
+      outline: none;
+    }
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .characters-container {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 24px;
+      }
+      .character-guard,
+      .character-prisoner {
+        flex: 1 1 45%;
+        max-width: 45%;
+      }
+    }
+    @media (max-width: 480px) {
+      .characters-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .character-guard,
+      .character-prisoner {
+        flex: 1 1 100%;
+        max-width: 240px;
+        margin: 0 auto;
+      }
+      .flag {
+        width: 24px;
+      }
+      h1 {
+        font-size: 1.5rem;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .scale-banner {
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      nav[role="navigation"] a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -546,9 +593,9 @@
       <img class="flag" src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" style="margin-left:6px" loading="lazy" />
     </span>
     <h1>
-      <img class="flag" src="https://flagcdn.com/w40/in.png" alt="India" style="margin-right:6px" loading="lazy" />
+      <img class="flag" src="https://flagcdn.com/w40/in.png" alt="India" loading="lazy" />
       Korea Game Surprise Mega Challenge
-      <img class="flag" src="https://flagcdn.com/w40/kr.png" alt="Korea" style="margin-left:6px" loading="lazy" />
+      <img class="flag" src="https://flagcdn.com/w40/kr.png" alt="Korea" loading="lazy" />
     </h1>
     <div class="tagline" aria-live="polite">First in India · Multiple Games · Ultimate Rewards!</div>
     <div style="margin:20px 0; text-align:center;">
@@ -568,10 +615,10 @@
         <div class="social-link-label">WhatsApp</div>
       </a>
     </div>
-    <div class="registration-notice" role="alert" aria-live="polite" aria-atomic="true">
-      To <span class="highlight1">claim your prize</span> and be eligible to play:<br />
-      You <u>MUST</u> follow our <span class="highlight1">Instagram</span> and <span class="highlight2">YouTube</span> pages,<br />
-      make an Instagram <span class="highlight1">Reel</span> showing your registration, and <b>collaborate with our official Insta ID before <u>October 1st, 8PM IST</u></b>!<br />
+    <div class="registration-notice" role="alert" aria-live="polite" aria-atomic="true" style="margin: 32px auto 28px; max-width:650px; text-align:center; font-size:1.17rem; font-weight:bold; color:#ffeb3b; background:rgba(26,0,0,0.12); border:2px dashed #d72631; border-radius:18px; box-shadow:0 0 24px #d7263155; padding:16px 12px; user-select:none;">
+      To <span style='color:#f4477a; font-weight: 800;'>claim your prize</span> and be eligible to play:<br />
+      You <u>MUST</u> follow our <span style="color:#f4477a; font-weight: 800;">Instagram</span> and <span style="color:#ff0000; font-weight: 800;">YouTube</span> pages,<br />
+      make an Instagram <span style="color:#fff176; font-weight: 800;">Reel</span> showing your registration, and <b>collaborate with our official Insta ID before <u>October 1st, 8PM IST</u></b>!<br />
       Stay tuned on our socials for updates.
     </div>
     <img class="hero-img" src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/9407efcf-0b5c-4d5c-99a7-dd0ca16158d7.png" alt="Futuristic Korean gaming background" loading="lazy" />
@@ -579,7 +626,6 @@
       <span>🚀 Don’t Miss: Brand NEW game every month! Each event with its own massive prizes & surprises! 🚀</span>
     </div>
   </header>
-
   <nav role="navigation" aria-label="Main navigation">
     <a href="#about" tabindex="0">About</a>
     <a href="#ceo" tabindex="0">CEO</a>
@@ -589,7 +635,6 @@
     <a href="#rules" tabindex="0">Rules</a>
     <a href="#contact" tabindex="0">Contact</a>
   </nav>
-
   <main role="main">
     <section id="about" tabindex="-1">
       <h2>About This Mega Event</h2>
@@ -607,10 +652,14 @@
         <div class="hl-card"><strong>Open to ALL Indian College Students</strong></div>
       </div>
     </section>
-
-    <section id="ceo" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; background: #122b12; border-radius: 18px; padding: 48px 24px; box-shadow: 0 6px 50px #28a745aa; max-width: 1050px; margin: 60px auto 40px;" tabindex="-1" aria-labelledby="ceo-title">
+    <section id="ceo"
+      style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; background: #122b12; border-radius: 18px; padding: 48px 24px; box-shadow: 0 6px 50px #28a745aa; max-width: 1050px; margin: 60px auto 40px;"
+      tabindex="-1" aria-labelledby="ceo-title">
       <div style="flex: 1 1 450px; min-width: 320px;">
-        <h2 id="ceo-title" style="color:#28a745; text-align:center; text-shadow:0 0 18px #3aff7f; font-size:2.6rem; margin-bottom:24px;">Youngest CEO Spotlight</h2>
+        <h2 id="ceo-title"
+          style="color:#28a745; text-align:center; text-shadow:0 0 18px #3aff7f; font-size:2.6rem; margin-bottom:24px;">
+          Youngest CEO Spotlight
+        </h2>
         <p style="color:#adf19a; font-weight:900; font-size:1.8rem; margin-bottom:30px; text-align:center;">
           Organized by India’s youngest CEO (age 19)
         </p>
@@ -620,45 +669,57 @@
         </p>
       </div>
       <div style="flex: 1 1 350px; min-width: 260px; text-align: center;">
-        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/064ff9c5-c4dc-4d3f-a3c7-3d6ec00eb02c.png" alt="FuturePlay Industries Logo" style="max-width:320px; width:100%; height:auto; margin:20px auto; box-shadow: 0 0 40px #28a745, 0 0 60px #3aff7f" loading="lazy" />
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/064ff9c5-c4dc-4d3f-a3c7-3d6ec00eb02c.png"
+          alt="FuturePlay Industries Logo"
+          style="max-width:320px; width:100%; height:auto; margin:20px auto; box-shadow: 0 0 40px #28a745, 0 0 60px #3aff7f"
+          loading="lazy" />
       </div>
     </section>
-
     <section id="characters" aria-label="Squid Game characters" style="max-width:1050px; margin: 40px auto;">
       <div class="characters-container">
-        <div class="character-guard" aria-label="Squid Game guard character with red hood and mask greeting">
-          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ac948acc-5548-4940-8f18-9697981aa553.png" alt="Squid Game guard with red clothes and mask" width="240" height="360" loading="lazy" />
+        <div class="character-guard" aria-label="Squid Game guard character with red hood and mask greeting" style="position: relative;">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ac948acc-5548-4940-8f18-9697981aa553.png"
+            alt="Squid Game guard with red clothes and mask" width="240" height="360" loading="lazy" />
           <div class="speech-bubble bubble-left" role="alert" aria-live="polite" aria-atomic="true">
             Hello! Register Yourself 🚀
           </div>
         </div>
-        <div class="character-prisoner" aria-label="Squid Game prisoner character in green tracksuit prompting social follow">
-          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fa912aa2-da72-48c2-88b3-a03a8058cdd9.png" alt="Squid Game prisoner in green tracksuit" width="240" height="360" loading="lazy" />
+        <div class="character-prisoner" aria-label="Squid Game prisoner character in green tracksuit prompting social follow" style="position: relative;">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fa912aa2-da72-48c2-88b3-a03a8058cdd9.png"
+            alt="Squid Game prisoner in green tracksuit" width="240" height="360" loading="lazy" />
           <div class="speech-bubble bubble-right" role="alert" aria-live="polite" aria-atomic="true">
             Follow us on Instagram &amp; YouTube! 📲
           </div>
         </div>
       </div>
     </section>
-
     <section id="prizes" tabindex="-1">
       <h2>🚨 Grand Prizes & Guaranteed Rewards 🚨</h2>
-      <div class="prizes" role="list">
-        <div class="prize-card" role="listitem" aria-label="First prize: Brand New Sports Bike">
-          <h3>🥇 1st Prize</h3>
-          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/06997c63-06ad-45b9-9f06-3c5b94a6cade.png" alt="Futuristic Sports Bike" loading="lazy" />
-          <ul><li><b>Brand New Sports Bike</b></li></ul>
+      <div class="prizes" role="list" style="display:flex; flex-wrap: wrap; gap: 28px; justify-content: center; margin-top: 16px;">
+        <div class="prize-card" role="listitem" aria-label="First prize: Brand New Sports Bike"
+          style="background: #122b12; border-radius: 18px; padding: 20px; box-shadow: 0 6px 38px #28a745aa; max-width: 280px; text-align: center; color: #a1f597; user-select: none;">
+          <h3 style="color: #28a745; font-weight: 900; font-size: 1.35rem; margin-bottom: 12px; text-shadow: 0 0 10px #3aff7f;">🥇 1st Prize</h3>
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/06997c63-06ad-45b9-9f06-3c5b94a6cade.png" alt="Futuristic Sports Bike"
+            loading="lazy" style="max-width: 100%; height: auto; border-radius: 14px; margin-bottom: 12px; user-select: none;" />
+          <ul style="list-style:none; padding:0; margin:0; font-weight:600; font-size:1.05rem; color:#c4fac4;">
+            <li><b>Brand New Sports Bike</b></li>
+          </ul>
         </div>
-        <div class="prize-card" role="listitem" aria-label="Second prize: Thailand Trip, all expenses paid">
-          <h3>🥈 2nd Prize</h3>
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Thailand Travel" loading="lazy" />
-          <ul><li><b>Thailand Trip (all expenses paid)</b></li></ul>
+        <div class="prize-card" role="listitem" aria-label="Second prize: Thailand Trip, all expenses paid"
+          style="background: #122b12; border-radius: 18px; padding: 20px; box-shadow: 0 6px 38px #28a745aa; max-width: 280px; text-align: center; color: #a1f597; user-select: none;">
+          <h3 style="color: #28a745; font-weight: 900; font-size: 1.35rem; margin-bottom: 12px; text-shadow: 0 0 10px #3aff7f;">🥈 2nd Prize</h3>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Thailand Travel"
+            loading="lazy" style="max-width: 100%; height: auto; border-radius: 14px; margin-bottom: 12px; user-select: none;" />
+          <ul style="list-style:none; padding:0; margin:0; font-weight:600; font-size:1.05rem; color:#c4fac4;">
+            <li><b>Thailand Trip (all expenses paid)</b></li>
+          </ul>
         </div>
-        <div class="prize-card top50" role="listitem" aria-label="Ranks 1 to 50, guaranteed cash prizes for every winner, amounts revealed at event">
-          <h3>Ranks 1–50 Guaranteed Cash Prizes</h3>
-          <ul>
+        <div class="prize-card top50" role="listitem" aria-label="Ranks 1 to 50, guaranteed cash prizes for every winner, amounts revealed at event"
+          style="max-width: 320px;background: #194419;color: #bbffbb;box-shadow: 0 6px 48px #0f5015;padding: 20px; border-radius: 18px; user-select:none;">
+          <h3 style="font-weight:900; font-size:1.35rem; margin-bottom:12px; text-shadow: 0 0 10px #3aff7f;">Ranks 1–50 Guaranteed Cash Prizes</h3>
+          <ul style="list-style:none; padding:0; margin:0; font-weight:600; font-size:1.05rem;">
             <li><b>Guaranteed Cash Prizes for Every Top 50 Winner!</b></li>
-            <li style="color: #296d29; margin-top: 8px; font-weight: 600;">(Amounts revealed live at the event for a mega surprise!)</li>
+            <li style="color: #296d29; margin-top: 8px;">(Amounts revealed live at the event for a mega surprise!)</li>
           </ul>
           <div style="font-weight: bold; font-size: 1.1em; margin-top: 12px; color: #0f5015;">
             Your skill = Your cash. Place in Top 50, Get Rewarded!
@@ -669,31 +730,22 @@
         🎉 50 Winners! <span style="color:#1ce06e;">Everyone in Top 50 takes home cash</span> – Register now and play for your prize!
       </div>
     </section>
-
-    <section id="special-rules" tabindex="-1" aria-live="polite" aria-atomic="true">
-      <h2 style="color: #d72631; text-align: center; margin-bottom: 12px; text-shadow: 0 0 8px #b72b2b; user-select: none;">
+    <section id="special-rules" tabindex="-1" aria-live="polite" aria-atomic="true"
+      style="max-width: 1080px; margin: 0 auto 40px; padding: 0 12px; user-select: none;">
+      <h2 style="color: #d72631; text-align: center; margin-bottom: 12px; text-shadow: 0 0 8px #b72b2b;">
         🔥 Important Special Rules 🔥
       </h2>
-      <div class="marquee-rules" aria-label="Special event rules" style="color:#ff5252; user-select: none;">
-        <span>
-          ✦ Prize distribution ONLY if &gt; 3,00,000 registrations reached!
-          ✦ Each player MUST post an Instagram Reel showing registration &amp; tag our account @YourInstaAccount BEFORE game launch!
-          ✦ Game will be disclosed ONLY at launch time, never earlier!
-          ✦ Reels must be shared before launch date!
-          ✦ Failure to comply disqualifies prize eligibility
-          ✦ Players must FOLLOW us on Instagram and YouTube channels to claim any prizes!
-        </span>
+      <div class="marquee-rules" aria-label="Special event rules" style="color:#ff5252; font-weight: 700; overflow: hidden; white-space: nowrap; animation: marquee 25s linear infinite; border-radius: 18px; background: #33101033; padding: 14px 10px; font-size: 1rem;">
+        <span>✦ Prize distribution ONLY if &gt; 3,00,000 registrations reached! ✦ Each player MUST post an Instagram Reel showing registration &amp; tag our account @YourInstaAccount BEFORE game launch! ✦ Game will be disclosed ONLY at launch time, never earlier! ✦ Reels must be shared before launch date! ✦ Failure to comply disqualifies prize eligibility ✦ ✦ Players must FOLLOW us on Instagram and YouTube channels to claim any prizes! ✦</span>
       </div>
     </section>
-
-    <section id="launch-game" style="max-width: 1050px; margin: 30px auto; background: #122b12; border-radius: 18px; padding: 24px 18px; color: #28a745; text-align: center; box-shadow: 0 4px 42px #28a74599; user-select: none;" tabindex="-1" aria-live="polite">
+    <section id="launch-game" tabindex="-1" aria-live="polite"
+      style="max-width: 1050px; margin: 30px auto; background: #122b12; border-radius: 18px; padding: 24px 18px; color: #28a745; text-align: center; box-shadow: 0 4px 42px #28a74599;">
       <h2>🎮 Upcoming Game Launch</h2>
-      <div id="game-link" style="font-size: 1.4rem; margin-top: 15px; font-weight: bold">
-        Loading launch details...
-      </div>
+      <div id="game-link" style="font-size: 1.4rem; margin-top: 15px; font-weight: bold">Loading launch details...</div>
     </section>
-
-    <section id="live-stats" style="max-width: 1050px; margin: 30px auto; background: #1e331e; border-radius: 18px; padding: 24px 18px; color: #a0d8a0; text-align: center; box-shadow: 0 4px 42px #28a74577; user-select: none;" tabindex="-1" aria-live="polite">
+    <section id="live-stats" tabindex="-1" aria-live="polite"
+      style="max-width: 1050px; margin: 30px auto; background: #1e331e; border-radius: 18px; padding: 24px 18px; color: #a0d8a0; text-align: center; box-shadow: 0 4px 42px #28a74577;">
       <h2>📊 Live Site Stats</h2>
       <div style="font-size: 1.3rem; margin-top: 12px;">
         <span>👥 Registered Participants: </span><span id="registered-count" aria-atomic="true">0</span>
@@ -702,45 +754,39 @@
         <span>👀 Live Visitors Watching: </span><span id="live-viewers-count" aria-atomic="true">0</span>
       </div>
     </section>
-
-    <section id="register" tabindex="-1" aria-labelledby="register-title">
+    <section id="register" tabindex="-1" aria-labelledby="register-title" style="max-width: 500px; margin: 30px auto;">
       <h2 id="register-title">Register to Play & Win</h2>
-      <div class="form-section">
-        <form id="register-form" autocomplete="on" novalidate aria-describedby="form-desc" aria-live="assertive">
-          <div id="form-desc" class="sr-only">
-            Form to register with your full name, email ID, and contact number. All fields are required.
-          </div>
+      <div class="form-section" style="background: #122b12; padding: 24px 20px; border-radius: 18px; box-shadow: 0 6px 50px #28a745aa; color: #acf7ac;">
+        <form id="register-form" autocomplete="on" novalidate aria-describedby="form-desc" aria-live="assertive" style="display: flex; flex-direction: column; gap: 20px;">
+          <div id="form-desc" class="sr-only">Form to register with your full name, email ID, and contact number. All fields are required.</div>
           <label for="fullname">Full Name*</label>
-          <input type="text" id="fullname" name="fullname" required aria-required="true" aria-describedby="name-error" autocomplete="name" minlength="2" maxlength="50" />
-          <span id="name-error" role="alert" class="error-message" aria-live="polite"></span>
+          <input type="text" id="fullname" name="fullname" required aria-required="true" aria-describedby="name-error" autocomplete="name" minlength="2" maxlength="50" style="padding: 10px 14px; font-size: 1rem; border-radius: 12px; border: none; outline: none;" />
+          <span id="name-error" role="alert" class="error-message" aria-live="polite" style="color:#ff6464; font-weight:700; font-size:0.9rem; min-height:18px;"></span>
           <label for="email">Email ID*</label>
-          <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" autocomplete="email" />
-          <span id="email-error" role="alert" class="error-message" aria-live="polite"></span>
+          <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" autocomplete="email" style="padding: 10px 14px; font-size: 1rem; border-radius: 12px; border: none; outline: none;" />
+          <span id="email-error" role="alert" class="error-message" aria-live="polite" style="color:#ff6464; font-weight:700; font-size:0.9rem; min-height:18px;"></span>
           <label for="phone">Contact Number*</label>
-          <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phone-error" pattern="[0-9]{10}" autocomplete="tel" maxlength="10" />
-          <span id="phone-error" role="alert" class="error-message" aria-live="polite"></span>
-          <button type="submit" id="submit-btn">Register Instantly</button>
-          <div id="form-status" role="alert" aria-live="assertive" style="margin-top: 8px;"></div>
+          <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phone-error" pattern="[0-9]{10}" autocomplete="tel" maxlength="10" style="padding: 10px 14px; font-size: 1rem; border-radius: 12px; border: none; outline: none;" />
+          <span id="phone-error" role="alert" class="error-message" aria-live="polite" style="color:#ff6464; font-weight:700; font-size:0.9rem; min-height:18px;"></span>
+          <button type="submit" id="submit-btn" style="background-color: #d72631; color: white; font-weight: 700; font-size: 1.2rem; padding: 14px 20px; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 20px #d7263155; transition: background-color 0.3s ease; user-select: none;">Register Instantly</button>
+          <div id="form-status" role="alert" aria-live="assertive" style="margin-top: 8px; font-weight: 700; font-size: 1rem; min-height: 20px;"></div>
         </form>
         <div style="color: #acf7ac; font-weight: bold; margin: 9px 0 0;">Limited seats &middot; Free registration!</div>
       </div>
     </section>
-
-    <section id="rules" tabindex="-1">
+    <section id="rules" tabindex="-1" style="max-width: 1080px; margin: 0 auto 50px;">
       <h2>Event Rules & Eligibility</h2>
-      <div class="highlights" aria-label="Event rules and eligibility">
-        <div class="hl-card">College Students Only</div>
-        <div class="hl-card">Secret Game Revealed Live</div>
-        <div class="hl-card">No Cheating – Fair Play</div>
-        <div class="hl-card">Massive Prizes for Winners</div>
-        <div class="hl-card">New Game & Prizes Monthly</div>
+      <div class="highlights" aria-label="Event rules and eligibility" style="display:flex;flex-wrap: wrap; gap:16px; margin:20px auto 0; max-width:720px;">
+        <div class="hl-card" style="background-color: #114911dd; padding:14px 22px; border-radius: 16px; font-weight: 700; font-size: 1.1rem; text-align: center; box-shadow: 0 3px 24px #28a745bb; min-width: 220px; max-width: 280px; color: #a1f597; user-select: none;">College Students Only</div>
+        <div class="hl-card" style="background-color: #114911dd; padding:14px 22px; border-radius: 16px; font-weight: 700; font-size: 1.1rem; text-align: center; box-shadow: 0 3px 24px #28a745bb; min-width: 220px; max-width: 280px; color: #a1f597; user-select: none;">Secret Game Revealed Live</div>
+        <div class="hl-card" style="background-color: #114911dd; padding:14px 22px; border-radius: 16px; font-weight: 700; font-size: 1.1rem; text-align: center; box-shadow: 0 3px 24px #28a745bb; min-width: 220px; max-width: 280px; color: #a1f597; user-select: none;">No Cheating – Fair Play</div>
+        <div class="hl-card" style="background-color: #114911dd; padding:14px 22px; border-radius: 16px; font-weight: 700; font-size: 1.1rem; text-align: center; box-shadow: 0 3px 24px #28a745bb; min-width: 220px; max-width: 280px; color: #a1f597; user-select: none;">Massive Prizes for Winners</div>
+        <div class="hl-card" style="background-color: #114911dd; padding:14px 22px; border-radius: 16px; font-weight: 700; font-size: 1.1rem; text-align: center; box-shadow: 0 3px 24px #28a745bb; min-width: 220px; max-width: 280px; color: #a1f597; user-select: none;">New Game & Prizes Monthly</div>
       </div>
     </section>
-
-    <section id="contact" aria-label="Contact and social" tabindex="-1">
+    <section id="contact" aria-label="Contact and social" tabindex="-1" style="max-width: 500px; margin: 0 auto 40px; padding: 0 12px; color: #acf7ac; user-select: none;">
       <h2>Contact & Social</h2>
-      <p>
-        For queries or press:<br />
+      <p>For queries or press:<br />
         <b>Whatsapp Group:</b>
         <a href="https://chat.whatsapp.com/Js9Rp1uSugM9YXN19iMDlQ?mode=ems_share_t" target="_blank" rel="noopener" style="color:#28a745;">Join WhatsApp Chat</a>
       </p>
@@ -751,7 +797,6 @@
       </p>
     </section>
   </main>
-
   <footer style="text-align:center; padding:18px; background:#0b1b0b; color:#a1f597;" role="contentinfo" user-select="none">
     &copy; 2025 Korea Game Surprise Project | Next Gen Gaming | Student CEO<br />
     Organized by FuturePlay Industries – Innovating Gaming & Esports<br />
@@ -759,11 +804,10 @@
     <span style="font-size: 1.3rem;">🤝</span>
     <img class="flag" src="https://flagcdn.com/w80/kr.png" alt="Korea Flag" loading="lazy" />
   </footer>
-
-  <a href="#register" id="sticky-register" class="cta-btn" aria-label="Register Now" role="button" tabindex="0">
+  <a href="#register" id="sticky-register" class="cta-btn" aria-label="Register Now" role="button" tabindex="0"
+    style="position: fixed; bottom: 20px; right: 20px; z-index: 100; background-color: #d72631; color: white; padding: 16px 26px; border-radius: 40px; font-weight: 700; font-size: 1.1rem; box-shadow: 0 6px 25px #d7263155; text-decoration: none; user-select: none; transition: background-color 0.3s ease;">
     🚀 Register Now
   </a>
-
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
@@ -777,19 +821,16 @@
       push,
       serverTimestamp,
     } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
-
     const firebaseConfig = {
-      apiKey: "AIzaSyDRWYCfNnwwaUsqz0_3Zk_4QHldOjjMdHU",
+      apiKey: "AIzaSyD_9v6M2tgj-kzgh1YsrFRNhhwm98RWtCQ",
       authDomain: "korea-project-f132e.firebaseapp.com",
-      databaseURL:
-        "https://korea-project-f132e-default-rtdb.asia-southeast1.firebasedatabase.app",
+      databaseURL: "https://korea-project-f132e-default-rtdb.asia-southeast1.firebasedatabase.app",
       projectId: "korea-project-f132e",
       storageBucket: "korea-project-f132e.firebasestorage.app",
       messagingSenderId: "502003597796",
       appId: "1:502003597796:web:1381d63daabded7d7447f1",
       measurementId: "G-KGC38JDX5X",
     };
-
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const db = getDatabase(app);
@@ -803,7 +844,6 @@
     const registerForm = document.getElementById("register-form");
     const submitBtn = document.getElementById("submit-btn");
     const formStatus = document.getElementById("form-status");
-
     function updateGameLaunch() {
       const now = new Date();
       if (!gameLinkEl) return;
@@ -818,31 +858,25 @@
         gameLinkEl.textContent = `Game launches in ${days}d ${hours}h ${minutes}m ${seconds}s (IST)`;
       }
     }
-
     setInterval(updateGameLaunch, 1000);
     updateGameLaunch();
-
     onValue(regCountRef, (snapshot) => {
       const count = snapshot.val() || 0;
       if (registeredCountEl) registeredCountEl.textContent = count.toLocaleString();
     });
-
     const uid = "visitor_" + Math.random().toString(36).slice(2);
     const userRef = ref(db, "liveVisitors/users/" + uid);
     const connectedRef = ref(db, ".info/connected");
-
     onValue(connectedRef, (snap) => {
       if (snap.val() === true) {
         set(userRef, true);
         onDisconnect(userRef).remove();
       }
     });
-
     onValue(liveVisitorsRef, (snap) => {
       const viewersCount = snap.numChildren();
       if (liveViewersCountEl) liveViewersCountEl.textContent = viewersCount.toLocaleString();
     });
-
     function validateInput(field) {
       if (!field) return false;
       const value = field.value.trim();
@@ -875,11 +909,9 @@
       }
       return isValid;
     }
-
     registerForm.addEventListener("input", (event) => {
       validateInput(event.target);
     });
-
     registerForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       const fullname = registerForm.fullname.value.trim();
@@ -947,5 +979,11 @@
       }
     });
   </script>
+  <style>
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </body>
 </html>
