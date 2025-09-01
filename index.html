@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Korea Game Surprise Mega Challenge - Squid Game Themed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: radial-gradient(circle at center top, #000000 40%, #0b1b0b 100%);
+      color: #e5e5e5;
+      font-weight: 400;
+      font-family: "Montserrat", Arial, sans-serif;
+      margin: 0;
+      line-height: 1.5;
+    }
+    h1, h2 {
+      text-shadow: 0 0 15px #d72631, 0 0 25px #a31d24;
+      color: #d72631;
+      font-family: "Orbitron", sans-serif;
+    }
+    nav {
+      background: #0b1b0b;
+      box-shadow: 0 0 15px #d72631cc;
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      font-size: 1.1em;
+      padding: 5px 0;
+    }
+    nav a {
+      color: #28a745;
+      text-decoration: none;
+      padding: 12px 27px;
+      transition: 0.3s;
+      font-weight: 700;
+      border-radius: 0;
+    }
+    nav a:hover,
+    nav a:focus {
+      background: #d72631;
+      color: #000;
+      outline: none;
+      box-shadow: 0 0 12px #a31d24;
+    }
+    .cta-btn {
+      background: #d72631;
+      color: #fff;
+      box-shadow: 0 0 15px #a02c2c88;
+      transition: all 0.4s ease;
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding: 14px 34px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      border: none;
+    }
+    .cta-btn:hover,
+    .cta-btn:focus {
+      background: #28a745;
+      box-shadow: 0 0 25px #3a873aaa;
+      color: #000;
+      transform: scale(1.05);
+      outline: none;
+    }
+    #sticky-register {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #d72631;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 14px 26px;
+      border-radius: 50px;
+      box-shadow: 0 0 20px #a02c2cbb;
+      animation: pulseSticky 2s infinite;
+      z-index: 999;
+      text-decoration: none;
+      user-select: none;
+    }
+    #sticky-register:hover,
+    #sticky-register:focus {
+      background: #28a745;
+      box-shadow: 0 0 40px #3a873aaa;
+      outline: none;
+      transform: scale(1.1);
+      color: #000;
+    }
+    @keyframes pulseSticky {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px #a02c2cbb;
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 35px #3a873aaa;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px #a02c2cbb;
+      }
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #100808, #220d0d 90%);
+      padding: 38px 9px 26px 9px;
+      user-select: none;
+    }
+    .scale-banner {
+      color: #28a745;
+      background: #1e271e;
+      border-radius: 18px;
+      padding: 8px 32px;
+      display: inline-block;
+      font-size: 1.13rem;
+      box-shadow: 0 0 25px #3aff7f55;
+      margin-bottom: 18px;
+    }
+    .flag {
+      display: inline-block;
+      animation: wave 2s infinite ease-in-out;
+      transform-origin: center;
+      height: 40px;
+      vertical-align: middle;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg) skewX(0deg); }
+      25% { transform: rotate(2deg) skewX(2deg); }
+      50% { transform: rotate(0deg) skewX(0deg); }
+      75% { transform: rotate(-2deg) skewX(-2deg); }
+      100% { transform: rotate(0deg) skewX(0deg); }
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin: 0;
+    }
+    .tagline {
+      font-size: 1.3rem;
+      color: #d72631;
+      font-weight: bold;
+      margin: 9px 0 16px;
+      animation: blink 1.2s infinite alternate;
+      user-select: none;
+    }
+    @keyframes blink { to {opacity: 0.38;} }
+    .hero-img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px #a02c2ccc;
+      margin: 12px auto 14px;
+      display: block;
+      object-fit: cover;
+      filter: grayscale(30%);
+      loading: lazy;
+    }
+    .social-links-container {
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+    }
+    .social-link-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 1.06rem;
+      transition: transform 0.18s;
+    }
+    .social-link-btn:hover { transform: translateY(-4px) scale(1.09);}
+    .social-link-btn img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 8px;
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 4px 24px 2px rgba(0,0,0,0.23);
+    }
+    .social-link-label {
+      color: #fff;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1050px;
+      margin: 44px auto 26px;
+      background: rgba(15, 20, 15, 0.92);
+      border-radius: 18px;
+      padding: 32px 18px;
+      box-shadow: 0 4px 42px #1fd72666;
+      user-select: none;
+    }
+    h2 {
+      color: #28a745;
+      text-align: center;
+      text-shadow: 0 0 14px #3aff7f;
+      margin-top: 0;
+      font-family: "Orbitron", sans-serif;
+    }
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 24px 0;
+    }
+    .hl-card {
+      background: #122212;
+      border: 2px solid #28a745;
+      border-radius: 17px;
+      padding: 12px 14px;
+      flex: 1 1 auto;
+      min-width: 220px;
+      max-width: 98vw;
+      text-align: center;
+      animation: bounceIn 1s;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin: 8px auto;
+      user-select: none;
+      color: #d7f2d7;
+      font-weight: 600;
+    }
+    .hl-card strong {
+      font-size: 1.3em;
+      color: #d72631;
+    }
+    @keyframes bounceIn {
+      from {transform: scale(0.7);opacity: 0;}
+      to {transform: scale(1);opacity: 1;}
+    }
+    .prizes {
+      gap: 32px;
+      justify-content: center;
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .prize-card {
+      background: linear-gradient(120deg, #1e3a16 70%, #28a745 100%);
+      color: #e5f3e0;
+      border-radius: 20px;
+      padding: 20px 15px 16px 20px;
+      margin-bottom: 12px;
+      text-align: center;
+      box-shadow: 0 0 14px #3aff7f, 0 0 30px #17b744, 0 0 45px #28a745aa;
+      max-width: 240px;
+      flex: 1 1 210px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .prize-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #28ff58, 0 0 50px #17d740, 0 0 70px #28ff58cc;
+    }
+    .prize-card ul {
+      padding-left: 19px;
+      list-style-type: none;
+      margin: 0;
+    }
+    .prize-card li {
+      margin: 7px 0;
+    }
+    .prize-card img {
+      border-radius: 14px;
+      max-width: 100%;
+      height: 190px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 25px rgba(40, 167, 69, 0.8);
+      user-select: none;
+    }
+    .prize-card.top50 {
+      background: linear-gradient(60deg, #a1e347 70%, #50e9aa 100%);
+      color: #10331a;
+      box-shadow: 0 0 28px #a1e347, 0 0 45px #50e9aa, 0 0 75px #78d4ab;
+      font-weight: 800;
+      animation: pulseGlowTop50 2.5s infinite alternate;
+      border: 3px solid #50e9aa;
+    }
+    @keyframes pulseGlowTop50 {
+      0% {
+        box-shadow: 0 0 28px #50e9aacc, 0 0 45px #50e9aacc, 0 0 75px #50e9aacc;
+        transform: scale(1);
+      }
+      100% {
+        box-shadow: 0 0 55px #50e9aaff, 0 0 60px #50e9aaff, 0 0 95px #50e9aaff;
+        transform: scale(1.05);
+      }
+    }
+    .prize-card.top50 h3::before {
+      content: "💸";
+      margin-right: 8px;
+      font-size: 1.3em;
+    }
+    .prize-card.top50 ul li:first-child {
+      font-size: 1.25em;
+      color: #296d29;
+      font-weight: 900;
+      text-shadow: 0 0 6px #159215, 0 0 10px #44ff44;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .prize-card, .hl-card {max-width: 90vw; min-width: 90vw;}
+    }
+    #special-rules {
+      max-width: 1050px;
+      margin: 30px auto;
+      padding: 20px 18px;
+      background: #331414cc;
+      border-radius: 18px;
+      box-shadow: 0 0 20px #d72631cc;
+      border: 2px solid #d72631;
+      color: #ff6464;
+      font-weight: bold;
+      font-size: 1.1rem;
+      overflow: hidden;
+      position: relative;
+      user-select: none;
+    }
+    #special-rules .marquee-rules {
+      white-space: nowrap;
+      animation: marquee-slide 18s linear infinite;
+      display: block;
+      color: #ff5252;
+    }
+    @keyframes marquee-slide {0% {transform: translateX(100%);} 100% {transform: translateX(-100%);}}
+    .form-section {
+      background: #1a2c1a90;
+      border-radius: 15px;
+      padding: 21px 14px;
+      margin-top: 19px;
+      text-align: center;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: none;
+      color: #cfffcf;
+    }
+    label {
+      display: block;
+      margin: 12px 0 2px;
+      font-weight: 700;
+      color: #ace1ac;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #44bb44;
+      width: 90%;
+      max-width: 370px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background: #0d1a0d;
+      color: #c1ffc1;
+    }
+    input:focus, button:focus {
+      box-shadow: 0 0 8px #28a745;
+      outline: none;
+      border-color: #28a745;
+      background: #142a14;
+    }
+    button {
+      background: #d72631;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: auto;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+    button:disabled {
+      background: #789978;
+      cursor: not-allowed;
+    }
+    button:hover:not(:disabled) {
+      background: #28a745;
+      color: #000;
+    }
+    .error-message {
+      color: #ff6464;
+      font-size: 0.9rem;
+      height: 1.3em;
+      margin-top: 2px;
+      display: block;
+      text-align: left;
+      max-width: 370px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .characters-container {
+      margin: 24px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      user-select: none;
+    }
+    .character-guard, .character-prisoner {
+      position: relative;
+      animation: floatUpDown 3.5s ease-in-out infinite, waveHand 5s ease-in-out infinite;
+      transform-origin: center bottom;
+      width: 240px;
+      flex-shrink: 0;
+    }
+    .character-guard img {
+      animation: pulseGlow 2.8s ease-in-out infinite;
+    }
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes waveHand {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-8px) rotate(6deg);
+      }
+      50% {
+        transform: translateY(0) rotate(0deg);
+      }
+      75% {
+        transform: translateY(-6px) rotate(-6deg);
+      }
+    }
+    @keyframes pulseGlow {
+      0%, 100% {
+        filter: drop-shadow(0 0 4px #a02c2c);
+      }
+      50% {
+        filter: drop-shadow(0 0 10px #b84343);
+      }
+    }
+    .speech-bubble {
+      position: absolute;
+      max-width: 180px;
+      padding: 10px 14px;
+      border-radius: 18px;
+      background: rgba(215, 38, 49, 0.85);
+      color: #fff;
+      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      box-shadow: 0 0 12px #a02c2cbb;
+      animation: bubbleFadeSlide 4s ease-in-out infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+    .bubble-left {
+      bottom: 85%;
+      left: -190px;
+      clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+    }
+    .bubble-right {
+      bottom: 70%;
+      right: -190px;
+      clip-path: polygon(0 0, 80% 0, 100% 20px, 100% 100%, 0 100%);
+    }
+    @keyframes bubbleFadeSlide {
+      0%, 100% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Social Links */
+    .social-links-container {
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+    }
+    .social-link-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 1.06rem;
+      transition: transform 0.18s;
+    }
+    .social-link-btn:hover { transform: translateY(-4px) scale(1.09);}
+    .social-link-btn img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 8px;
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 4px 24px 2px rgba(0,0,0,0.23);
+    }
+    .social-link-label {
+      color: #fff;
+      font-weight: 700;
+    }
+    /* Prize & Registration Notice */
+    .registration-notice {
+      margin: 32px auto 28px;
+      max-width: 650px;
+      text-align: center;
+      font-size: 1.17rem;
+      font-weight: bold;
+      color: #ffeb3b;
+      background: rgba(26,0,0,0.12);
+      border: 2px dashed #d72631;
+      border-radius: 18px;
+      box-shadow: 0 0 24px #d7263155;
+      padding: 16px 12px;
+      user-select: none;
+    }
+    .registration-notice span {
+      color: #fff;
+      font-weight: 800;
+    }
+    .registration-notice span.highlight1 { color: #f4477a; }
+    .registration-notice span.highlight2 { color: #ff0000; }
+    .registration-notice u { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <span class="scale-banner" aria-label="Mega Gaming Festival with India and Korea flags">
+      <img class="flag" src="https://flagcdn.com/w40/in.png" alt="Indian Flag" style="margin-right:6px" loading="lazy" />
+      Mega Gaming Festival
+      <img class="flag" src="https://flagcdn.com/w40/kr.png" alt="Korean Flag" style="margin-left:6px" loading="lazy" />
+    </span>
+    <h1>
+      <img class="flag" src="https://flagcdn.com/w40/in.png" alt="India" style="margin-right:6px" loading="lazy" />
+      Korea Game Surprise Mega Challenge
+      <img class="flag" src="https://flagcdn.com/w40/kr.png" alt="Korea" style="margin-left:6px" loading="lazy" />
+    </h1>
+    <div class="tagline" aria-live="polite">First in India · Multiple Games · Ultimate Rewards!</div>
+    <div style="margin:20px 0; text-align:center;">
+      <a href="#register" class="cta-btn" role="button" tabindex="0">🚀 Register Free Now 🚀</a>
+    </div>
+    <div class="social-links-container" aria-label="Social media links">
+      <a href="https://www.instagram.com/2025eventkorea_official?igsh=dGlrdmg3bDEycnNw&utm_source=qr" target="_blank" rel="noopener" aria-label="Follow us on Instagram" class="social-link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" />
+        <div class="social-link-label">Instagram</div>
+      </a>
+      <a href="https://www.youtube.com/channel/UCBR8-60-B28hp2BmDPdntcQ" target="_blank" rel="noopener" aria-label="Subscribe on YouTube" class="social-link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" />
+        <div class="social-link-label">YouTube</div>
+      </a>
+      <a href="https://chat.whatsapp.com/Js9Rp1uSugM9YXN19iMDlQ?mode=ems_share_t" target="_blank" rel="noopener" aria-label="Join us on WhatsApp" class="social-link-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+        <div class="social-link-label">WhatsApp</div>
+      </a>
+    </div>
+    <div class="registration-notice" role="alert" aria-live="polite" aria-atomic="true">
+      To <span class="highlight1">claim your prize</span> and be eligible to play:<br />
+      You <u>MUST</u> follow our <span class="highlight1">Instagram</span> and <span class="highlight2">YouTube</span> pages,<br />
+      make an Instagram <span class="highlight1">Reel</span> showing your registration, and <b>collaborate with our official Insta ID before <u>October 1st, 8PM IST</u></b>!<br />
+      Stay tuned on our socials for updates.
+    </div>
+    <img class="hero-img" src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/9407efcf-0b5c-4d5c-99a7-dd0ca16158d7.png" alt="Futuristic Korean gaming background" loading="lazy" />
+    <div class="marquee" aria-hidden="true" style="text-align:center;">
+      <span>🚀 Don’t Miss: Brand NEW game every month! Each event with its own massive prizes & surprises! 🚀</span>
+    </div>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#about" tabindex="0">About</a>
+    <a href="#ceo" tabindex="0">CEO</a>
+    <a href="#prizes" tabindex="0">Prizes</a>
+    <a href="#future" tabindex="0">Future Events</a>
+    <a href="#register" tabindex="0">Register</a>
+    <a href="#rules" tabindex="0">Rules</a>
+    <a href="#contact" tabindex="0">Contact</a>
+  </nav>
+
+  <main role="main">
+    <section id="about" tabindex="-1">
+      <h2>About This Mega Event</h2>
+      <p>
+        Welcome to India’s <span style="color:#d72631;">BIGGEST</span> Korea-themed
+        online game competition—a secret mega-game <b>unveiled live on event day!</b> Play for prestige and jaw-dropping prizes,
+        with global gaming vibes and future-ready innovation.<br />
+        <b>Date:</b> 1st October 2025<br />
+        <b>Time:</b> 8:00 PM IST (all online)
+      </p>
+      <div class="highlights" aria-label="Event Highlights">
+        <div class="hl-card"><strong>Epic Gaming Festival</strong></div>
+        <div class="hl-card"><strong>Unseen Secret Game Format</strong></div>
+        <div class="hl-card"><strong>Monthly Contests</strong></div>
+        <div class="hl-card"><strong>Open to ALL Indian College Students</strong></div>
+      </div>
+    </section>
+
+    <section id="ceo" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; background: #122b12; border-radius: 18px; padding: 48px 24px; box-shadow: 0 6px 50px #28a745aa; max-width: 1050px; margin: 60px auto 40px;" tabindex="-1" aria-labelledby="ceo-title">
+      <div style="flex: 1 1 450px; min-width: 320px;">
+        <h2 id="ceo-title" style="color:#28a745; text-align:center; text-shadow:0 0 18px #3aff7f; font-size:2.6rem; margin-bottom:24px;">Youngest CEO Spotlight</h2>
+        <p style="color:#adf19a; font-weight:900; font-size:1.8rem; margin-bottom:30px; text-align:center;">
+          Organized by India’s youngest CEO (age 19)
+        </p>
+        <p style="color: #d7f2d7; font-size: 1.25rem; line-height: 1.6; text-align: center; max-width: 440px; margin: 0 auto;">
+          This innovation is led by a bold student entrepreneur, inviting you to join
+          history’s first surprise Korea gaming festival in India, with pro-level rewards.
+        </p>
+      </div>
+      <div style="flex: 1 1 350px; min-width: 260px; text-align: center;">
+        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/064ff9c5-c4dc-4d3f-a3c7-3d6ec00eb02c.png" alt="FuturePlay Industries Logo" style="max-width:320px; width:100%; height:auto; margin:20px auto; box-shadow: 0 0 40px #28a745, 0 0 60px #3aff7f" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="characters" aria-label="Squid Game characters" style="max-width:1050px; margin: 40px auto;">
+      <div class="characters-container">
+        <div class="character-guard" aria-label="Squid Game guard character with red hood and mask greeting">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ac948acc-5548-4940-8f18-9697981aa553.png" alt="Squid Game guard with red clothes and mask" width="240" height="360" loading="lazy" />
+          <div class="speech-bubble bubble-left" role="alert" aria-live="polite" aria-atomic="true">
+            Hello! Register Yourself 🚀
+          </div>
+        </div>
+        <div class="character-prisoner" aria-label="Squid Game prisoner character in green tracksuit prompting social follow">
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fa912aa2-da72-48c2-88b3-a03a8058cdd9.png" alt="Squid Game prisoner in green tracksuit" width="240" height="360" loading="lazy" />
+          <div class="speech-bubble bubble-right" role="alert" aria-live="polite" aria-atomic="true">
+            Follow us on Instagram &amp; YouTube! 📲
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prizes" tabindex="-1">
+      <h2>🚨 Grand Prizes & Guaranteed Rewards 🚨</h2>
+      <div class="prizes" role="list">
+        <div class="prize-card" role="listitem" aria-label="First prize: Brand New Sports Bike">
+          <h3>🥇 1st Prize</h3>
+          <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/06997c63-06ad-45b9-9f06-3c5b94a6cade.png" alt="Futuristic Sports Bike" loading="lazy" />
+          <ul><li><b>Brand New Sports Bike</b></li></ul>
+        </div>
+        <div class="prize-card" role="listitem" aria-label="Second prize: Thailand Trip, all expenses paid">
+          <h3>🥈 2nd Prize</h3>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Thailand Travel" loading="lazy" />
+          <ul><li><b>Thailand Trip (all expenses paid)</b></li></ul>
+        </div>
+        <div class="prize-card top50" role="listitem" aria-label="Ranks 1 to 50, guaranteed cash prizes for every winner, amounts revealed at event">
+          <h3>Ranks 1–50 Guaranteed Cash Prizes</h3>
+          <ul>
+            <li><b>Guaranteed Cash Prizes for Every Top 50 Winner!</b></li>
+            <li style="color: #296d29; margin-top: 8px; font-weight: 600;">(Amounts revealed live at the event for a mega surprise!)</li>
+          </ul>
+          <div style="font-weight: bold; font-size: 1.1em; margin-top: 12px; color: #0f5015;">
+            Your skill = Your cash. Place in Top 50, Get Rewarded!
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 24px; font-size: 1.25em; font-weight: bold; color: #a1f597; text-shadow: 0 2px 12px #114911;">
+        🎉 50 Winners! <span style="color:#1ce06e;">Everyone in Top 50 takes home cash</span> – Register now and play for your prize!
+      </div>
+    </section>
+
+    <section id="special-rules" tabindex="-1" aria-live="polite" aria-atomic="true">
+      <h2 style="color: #d72631; text-align: center; margin-bottom: 12px; text-shadow: 0 0 8px #b72b2b; user-select: none;">
+        🔥 Important Special Rules 🔥
+      </h2>
+      <div class="marquee-rules" aria-label="Special event rules" style="color:#ff5252; user-select: none;">
+        <span>
+          ✦ Prize distribution ONLY if &gt; 3,00,000 registrations reached!
+          ✦ Each player MUST post an Instagram Reel showing registration &amp; tag our account @YourInstaAccount BEFORE game launch!
+          ✦ Game will be disclosed ONLY at launch time, never earlier!
+          ✦ Reels must be shared before launch date!
+          ✦ Failure to comply disqualifies prize eligibility
+          ✦ Players must FOLLOW us on Instagram and YouTube channels to claim any prizes!
+        </span>
+      </div>
+    </section>
+
+    <section id="launch-game" style="max-width: 1050px; margin: 30px auto; background: #122b12; border-radius: 18px; padding: 24px 18px; color: #28a745; text-align: center; box-shadow: 0 4px 42px #28a74599; user-select: none;" tabindex="-1" aria-live="polite">
+      <h2>🎮 Upcoming Game Launch</h2>
+      <div id="game-link" style="font-size: 1.4rem; margin-top: 15px; font-weight: bold">
+        Loading launch details...
+      </div>
+    </section>
+
+    <section id="live-stats" style="max-width: 1050px; margin: 30px auto; background: #1e331e; border-radius: 18px; padding: 24px 18px; color: #a0d8a0; text-align: center; box-shadow: 0 4px 42px #28a74577; user-select: none;" tabindex="-1" aria-live="polite">
+      <h2>📊 Live Site Stats</h2>
+      <div style="font-size: 1.3rem; margin-top: 12px;">
+        <span>👥 Registered Participants: </span><span id="registered-count" aria-atomic="true">0</span>
+      </div>
+      <div style="font-size: 1.3rem; margin-top: 9px;">
+        <span>👀 Live Visitors Watching: </span><span id="live-viewers-count" aria-atomic="true">0</span>
+      </div>
+    </section>
+
+    <section id="register" tabindex="-1" aria-labelledby="register-title">
+      <h2 id="register-title">Register to Play & Win</h2>
+      <div class="form-section">
+        <form id="register-form" autocomplete="on" novalidate aria-describedby="form-desc" aria-live="assertive">
+          <div id="form-desc" class="sr-only">
+            Form to register with your full name, email ID, and contact number. All fields are required.
+          </div>
+          <label for="fullname">Full Name*</label>
+          <input type="text" id="fullname" name="fullname" required aria-required="true" aria-describedby="name-error" autocomplete="name" minlength="2" maxlength="50" />
+          <span id="name-error" role="alert" class="error-message" aria-live="polite"></span>
+          <label for="email">Email ID*</label>
+          <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error" autocomplete="email" />
+          <span id="email-error" role="alert" class="error-message" aria-live="polite"></span>
+          <label for="phone">Contact Number*</label>
+          <input type="tel" id="phone" name="phone" required aria-required="true" aria-describedby="phone-error" pattern="[0-9]{10}" autocomplete="tel" maxlength="10" />
+          <span id="phone-error" role="alert" class="error-message" aria-live="polite"></span>
+          <button type="submit" id="submit-btn">Register Instantly</button>
+          <div id="form-status" role="alert" aria-live="assertive" style="margin-top: 8px;"></div>
+        </form>
+        <div style="color: #acf7ac; font-weight: bold; margin: 9px 0 0;">Limited seats &middot; Free registration!</div>
+      </div>
+    </section>
+
+    <section id="rules" tabindex="-1">
+      <h2>Event Rules & Eligibility</h2>
+      <div class="highlights" aria-label="Event rules and eligibility">
+        <div class="hl-card">College Students Only</div>
+        <div class="hl-card">Secret Game Revealed Live</div>
+        <div class="hl-card">No Cheating – Fair Play</div>
+        <div class="hl-card">Massive Prizes for Winners</div>
+        <div class="hl-card">New Game & Prizes Monthly</div>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contact and social" tabindex="-1">
+      <h2>Contact & Social</h2>
+      <p>
+        For queries or press:<br />
+        <b>Whatsapp Group:</b>
+        <a href="https://chat.whatsapp.com/Js9Rp1uSugM9YXN19iMDlQ?mode=ems_share_t" target="_blank" rel="noopener" style="color:#28a745;">Join WhatsApp Chat</a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/2025eventkorea_official?igsh=dGlrdmg3bDEycnNw&utm_source=qr" target="_blank" rel="noopener" style="color:#28a745;" aria-label="Instagram social link">Instagram</a> |
+        <a href="https://www.youtube.com/channel/UCBR8-60-B28hp2BmDPdntcQ" target="_blank" rel="noopener" style="color:#28a745;" aria-label="YouTube social link">YouTube</a> |
+        <a href="#" style="color:#28a745;text-decoration:underline" aria-label="Twitter social link">Twitter</a>
+      </p>
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:18px; background:#0b1b0b; color:#a1f597;" role="contentinfo" user-select="none">
+    &copy; 2025 Korea Game Surprise Project | Next Gen Gaming | Student CEO<br />
+    Organized by FuturePlay Industries – Innovating Gaming & Esports<br />
+    <img class="flag" src="https://flagcdn.com/w80/in.png" alt="India Flag" loading="lazy" />
+    <span style="font-size: 1.3rem;">🤝</span>
+    <img class="flag" src="https://flagcdn.com/w80/kr.png" alt="Korea Flag" loading="lazy" />
+  </footer>
+
+  <a href="#register" id="sticky-register" class="cta-btn" aria-label="Register Now" role="button" tabindex="0">
+    🚀 Register Now
+  </a>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+    import {
+      getDatabase,
+      ref,
+      onValue,
+      runTransaction,
+      onDisconnect,
+      set,
+      push,
+      serverTimestamp,
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDRWYCfNnwwaUsqz0_3Zk_4QHldOjjMdHU",
+      authDomain: "korea-project-f132e.firebaseapp.com",
+      databaseURL:
+        "https://korea-project-f132e-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "korea-project-f132e",
+      storageBucket: "korea-project-f132e.firebasestorage.app",
+      messagingSenderId: "502003597796",
+      appId: "1:502003597796:web:1381d63daabded7d7447f1",
+      measurementId: "G-KGC38JDX5X",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase(app);
+    const launchDate = new Date("2025-10-01T20:00:00+05:30");
+    const regCountRef = ref(db, "registrations/count");
+    const regListRef = ref(db, "registrations/list");
+    const liveVisitorsRef = ref(db, "liveVisitors/users");
+    const gameLinkEl = document.getElementById("game-link");
+    const registeredCountEl = document.getElementById("registered-count");
+    const liveViewersCountEl = document.getElementById("live-viewers-count");
+    const registerForm = document.getElementById("register-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const formStatus = document.getElementById("form-status");
+
+    function updateGameLaunch() {
+      const now = new Date();
+      if (!gameLinkEl) return;
+      if (now >= launchDate) {
+        gameLinkEl.innerHTML = `<a href="https://your-game-launch-link.com" target="_blank" style="color:#28a745; font-weight:bold; font-size:1.5rem;" rel="noopener noreferrer">🚀 Click here to Launch the Game!</a>`;
+      } else {
+        const diffMs = launchDate - now;
+        const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diffMs / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diffMs / (1000 * 60)) % 60);
+        const seconds = Math.floor((diffMs / 1000) % 60);
+        gameLinkEl.textContent = `Game launches in ${days}d ${hours}h ${minutes}m ${seconds}s (IST)`;
+      }
+    }
+
+    setInterval(updateGameLaunch, 1000);
+    updateGameLaunch();
+
+    onValue(regCountRef, (snapshot) => {
+      const count = snapshot.val() || 0;
+      if (registeredCountEl) registeredCountEl.textContent = count.toLocaleString();
+    });
+
+    const uid = "visitor_" + Math.random().toString(36).slice(2);
+    const userRef = ref(db, "liveVisitors/users/" + uid);
+    const connectedRef = ref(db, ".info/connected");
+
+    onValue(connectedRef, (snap) => {
+      if (snap.val() === true) {
+        set(userRef, true);
+        onDisconnect(userRef).remove();
+      }
+    });
+
+    onValue(liveVisitorsRef, (snap) => {
+      const viewersCount = snap.numChildren();
+      if (liveViewersCountEl) liveViewersCountEl.textContent = viewersCount.toLocaleString();
+    });
+
+    function validateInput(field) {
+      if (!field) return false;
+      const value = field.value.trim();
+      let isValid = true;
+      let errorMsg = "";
+      if (field.required && value.length === 0) {
+        isValid = false;
+        errorMsg = "This field is required.";
+      } else if (field.type === "email") {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+          isValid = false;
+          errorMsg = "Please enter a valid email address.";
+        }
+      } else if (field.name === "phone") {
+        const phoneRegex = /^[0-9]{10}$/;
+        if (!phoneRegex.test(value)) {
+          isValid = false;
+          errorMsg = "Please enter a valid 10-digit phone number.";
+        }
+      } else if (field.name === "fullname") {
+        if (value.length < 2 || value.length > 50) {
+          isValid = false;
+          errorMsg = "Full name must be between 2 and 50 characters.";
+        }
+      }
+      const errorSpan = document.getElementById(field.name + "-error");
+      if (errorSpan) {
+        errorSpan.textContent = errorMsg;
+      }
+      return isValid;
+    }
+
+    registerForm.addEventListener("input", (event) => {
+      validateInput(event.target);
+    });
+
+    registerForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const fullname = registerForm.fullname.value.trim();
+      const email = registerForm.email.value.trim();
+      const phone = registerForm.phone.value.trim();
+      const validFullname = validateInput(registerForm.fullname);
+      const validEmail = validateInput(registerForm.email);
+      const validPhone = validateInput(registerForm.phone);
+      if (!validFullname || !validEmail || !validPhone) {
+        formStatus.textContent = "Please correct the errors before submitting.";
+        formStatus.style.color = "#ff6464";
+        return;
+      }
+      submitBtn.disabled = true;
+      formStatus.textContent = "Checking for existing registration...";
+      formStatus.style.color = "#28a745";
+      try {
+        let duplicateFound = false;
+        await new Promise((resolve) => {
+          onValue(
+            regListRef,
+            (snapshot) => {
+              snapshot.forEach((childSnapshot) => {
+                const data = childSnapshot.val();
+                if (
+                  data.email?.toLowerCase() === email.toLowerCase() ||
+                  data.phone === phone
+                ) {
+                  duplicateFound = true;
+                  resolve();
+                  return true;
+                }
+              });
+              resolve();
+            },
+            { onlyOnce: true }
+          );
+        });
+        if (duplicateFound) {
+          formStatus.textContent = "You have already registered with this email or phone number.";
+          formStatus.style.color = "#ff6464";
+          submitBtn.disabled = false;
+          return;
+        }
+        formStatus.textContent = "Registering, please wait...";
+        await push(regListRef, {
+          fullname,
+          email,
+          phone,
+          timestamp: serverTimestamp(),
+        });
+        await runTransaction(regCountRef, (count) => (count || 0) + 1);
+        formStatus.textContent = "Registered successfully! Thank you.";
+        formStatus.style.color = "#32ff7e";
+        registerForm.reset();
+        ["fullname", "email", "phone"].forEach((id) => {
+          const err = document.getElementById(id + "-error");
+          if (err) err.textContent = "";
+        });
+      } catch (error) {
+        formStatus.textContent = "Error during registration: " + error.message;
+        formStatus.style.color = "#ff6464";
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
